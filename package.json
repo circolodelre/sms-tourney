@@ -1,0 +1,22 @@
+{
+    "name": "balance80",
+    "version": "0.0.4",
+    "author": {
+        "name": "Francesco Bianco",
+        "email": "bianco@javanile.org"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/javanile/balance80.git"
+    },
+    "bin": {
+        "balance80": "./bin/balance80"
+    },
+    "dependencies": {
+        "body-parser": "^1.17.2",
+        "express": "^4.15.3",
+        "js-yaml": "^3.11.0",
+        "nodemon": "^1.14.3",
+        "open": "0.0.5"
+    }
+}
