@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var port = process.env.PORT || 3000;
 
-app.get('/sms/push', function (req, res) {
+app.get('/api/sms/push', function (req, res) {
     fs.writeFileSync('sms.json', req.body);
     res.send(req.body);
 });
