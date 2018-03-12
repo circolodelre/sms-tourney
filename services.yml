@@ -1,0 +1,5 @@
+
+services:
+  microbase.localhost:
+    node: server.js
+    port: 8080

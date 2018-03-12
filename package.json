@@ -1,5 +1,5 @@
 {
-    "name": "balance80",
+    "name": "lega-sms",
     "version": "0.0.4",
     "author": {
         "name": "Francesco Bianco",
@@ -7,13 +7,11 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/javanile/balance80.git"
-    },
-    "bin": {
-        "balance80": "./bin/balance80"
+        "url": "https://github.com/circolodelre/lega-sms.git"
     },
     "dependencies": {
         "body-parser": "^1.17.2",
+        "bouncy": "^3.2.2",
         "express": "^4.15.3",
         "js-yaml": "^3.11.0",
         "nodemon": "^1.14.3",
