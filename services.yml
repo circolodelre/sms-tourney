@@ -1,5 +1,5 @@
 
 services:
-  microbase.localhost:
+  sms.circolodelre.it:
     node: server.js
     port: 8080
