@@ -60,3 +60,9 @@ typings/
 
 # PhpStorm
 .idea/
+
+# SMS Tourney
+.config.yml
+/store/*
+!store/data/.gitkeep
+!store/log/.gitkeep
