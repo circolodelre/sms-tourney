@@ -20,7 +20,8 @@
         "js-yaml": "^3.11.0",
         "mkdirp": "^0.5.1",
         "nodemon": "^1.14.3",
-        "open": "0.0.5"
+        "open": "0.0.5",
+        "swiss-pairing": "^1.2.1"
     },
     "devDependencies": {
         "angular": "^1.6.4",
