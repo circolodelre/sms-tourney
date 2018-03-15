@@ -20,6 +20,11 @@ api.post('/api/sms/push', function (req, res) {
     return res.send({ error: "sms not valid" });
 });
 
+setInterval(function() {
+    console.log('Close rounds');
+
+}, 5000);
+
 module.exports = api.listen(port, function () {
     console.log('[SMS-Tourney] Server start on port', port);
 });

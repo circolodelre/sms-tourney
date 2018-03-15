@@ -3,15 +3,15 @@ var request = require('request');
 
 
 module.exports = {
-    send: function (message, callback) {
+    send: function (message, time, from, callback) {
         request.post(
             'http://localhost:3000/api/sms/push', {
                 json: true,
                 form: {
                     From:"393200466987",
-                    To:"393453030303",
+                    To:from,
                     Content: message,
-                    Time:"12/03/2018 05:20:09"
+                    Time: time
                 }
             }, function (err, res, obj) {
                 callback(obj);
