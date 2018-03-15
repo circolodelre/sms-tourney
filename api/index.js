@@ -1,18 +1,32 @@
+
 var fs = require('fs');
 var express = require('express');
-var app = express();
-var port = process.env.PORT || 3000;
+var mkdirp = require('mkdirp');
+var api = express();
 var bodyParser = require('body-parser');
+var config = require('./config');
+const port = process.env.PORT || 3000;
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
+api.use(bodyParser.json());
+api.use(bodyParser.urlencoded({ extended: true }));
+api.use(express.static('public'));
 
-app.post('/api/sms/push', function (req, res) {
-    fs.writeFileSync('sms.json', JSON.stringify(req.body));
-    res.send(req.body);
+api.post('/api/sms/push', function (req, res) {
+    var sms = req.body.Content;
+    if (sms && sms.match(/^torneo /i)) {
+        config.load();
+        var players = sms.trim().substr(6).trim().replace(/[\s\t\n]+/g, ' ').split(' ');
+        var tourneyId = 1;
+        var tourney = {
+            rounds: 6,
+            players: players
+        };
+        mkdirp.sync('./store/data/tourney/'+tourneyId);
+        return res.send(tourney);
+    }
+    return res.send({ error: "sms not valid" });
 });
 
-app.listen(port, function () {
+module.exports = api.listen(port, function () {
     console.log('[SMS-Tourney] Server start on port', port);
 });

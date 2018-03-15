@@ -43,7 +43,7 @@ gulp.task('js', function() {
         './node_modules/jquery/dist/jquery.min.js',
         './node_modules/angular/angular.min.js',
         './node_modules/angular-ui-router/release/angular-ui-router.min.js',
-        './app/app.js',
+        './app/server.js',
         './app/tpl.js',
         './app/**/*.js'
     ];

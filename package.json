@@ -6,7 +6,8 @@
         "email": "bianco@javanile.org"
     },
     "scripts": {
-        "start": "gulp start"
+        "start": "gulp start",
+        "tdd": "mocha --reporter spec"
     },
     "repository": {
         "type": "git",
@@ -17,6 +18,7 @@
         "bouncy": "^3.2.2",
         "express": "^4.15.3",
         "js-yaml": "^3.11.0",
+        "mkdirp": "^0.5.1",
         "nodemon": "^1.14.3",
         "open": "0.0.5"
     },
@@ -26,6 +28,7 @@
         "bulma": "^0.6.1",
         "bulma-extensions": "^0.5.2",
         "bulma-switch": "^0.1.2",
+        "chai": "^4.1.2",
         "gulp": "^3.9.1",
         "gulp-angular-templatecache": "^2.0.0",
         "gulp-concat": "^2.6.1",
@@ -36,6 +39,7 @@
         "gulp-sass": "^3.1.0",
         "gulp-watch": "^4.3.11",
         "jquery": "^3.2.1",
+        "request": "^2.85.0",
         "run-sequence": "^1.2.2"
     }
 }
