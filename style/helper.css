@@ -1,0 +1,25 @@
+
+/*/ Handle width /*/
+.width-100pc { width: 100% !important; }
+
+/*/ Handle margin /*/
+.no-marging        { margin:        0   !important; }
+.margin-right-1px  { margin-right:  1px !important; }
+.margin-right-2px  { margin-right:  2px !important; }
+.margin-right-4px  { margin-right:  4px !important; }
+.margin-right-8px  { margin-right:  8px !important; }
+.margin-bottom-1px { margin-bottom: 1px !important; }
+.margin-bottom-2px { margin-bottom: 2px !important; }
+.margin-bottom-4px { margin-bottom: 4px !important; }
+.margin-bottom-8px { margin-bottom: 8px !important; }
+
+/*/ Handle padding /*/
+.no-padding        { padding:       0   !important; }
+.no-padding-left   { padding-left:  0   !important; }
+.padding-8px       { padding:       8px !important; }
+.padding-right-8px { padding-right: 8px !important; }
+
+/*/ Handle overflow /*/
+.overflow-hidden   { overflow:   hidden !important; }
+.overflow-x-hidden { overflow-x: hidden !important; }
+.overflow-y-scroll { overflow-y: scroll !important; }

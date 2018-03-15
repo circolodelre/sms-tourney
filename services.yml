@@ -1,5 +1,5 @@
 ##
 services:
   sms.circolodelre.it:
-    node: server.js
+    node: index.js
     port: 8080

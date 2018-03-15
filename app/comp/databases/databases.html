@@ -1,0 +1,35 @@
+
+<div class="card">
+    <div class="card-content padding-8px layout-full-height">
+
+        <div class="field margin-bottom-8px">
+            <p class="control has-icons-left">
+                <span class="select width-100pc">
+                    <select
+                        class="width-100pc"
+                        ng-model="$root.database"
+                        ng-options="k as v.source for (k, v) in $root.config.databases"
+                        ng-change="$root.loadDatabase()"
+                        >
+                    </select>
+                </span>
+                <span class="icon is-small is-left">
+                    <i class="fa fa-book"></i>
+                </span>
+            </p>
+        </div>
+
+        <div class="overflow-x-hidden overflow-y-scroll layout-inner-panel-height">
+            <div class="columns is-multiline margin-right-8px">
+                <div
+                    class="column"
+                    ng-click="$ctrl.selectRecord(record)"
+                    ng-repeat="record in $root.databaseRecords"
+                    >
+                    <miniboard fen="record.fen"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

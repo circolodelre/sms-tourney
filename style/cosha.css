@@ -1,0 +1,23 @@
+
+.output-style {
+    padding: 8px;
+    background: #0a0a0a;
+    color: #00e7eb;
+    overflow-y: scroll;
+}
+
+.output-style #output {
+    color: #00e7eb;
+    padding: 0;
+    background: transparent;
+}
+
+.analysis-style {
+
+}
+
+.analysis-style #analysis {
+    font-size: 13px;
+    padding: 0;
+    background: transparent;
+}

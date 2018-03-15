@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-content padding-8px layout-full-height">
+
+        <div class="field margin-bottom-8px">
+            <p class="control has-icons-left">
+                <span class="select width-100pc">
+                    <select
+                        class="width-100pc"
+                        ng-model="$root.utility"
+                        ng-options="k as k for (k, v) in $root.config.utilities"
+                        ng-change="$root.process()"
+                        >
+                    </select>
+                </span>
+                <span class="icon is-small is-left">
+                    <i class="fa fa-wrench"></i>
+                </span>
+            </p>
+        </div>
+
+        <output/>
+
+    </div>
+</div>

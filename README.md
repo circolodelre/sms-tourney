@@ -1,1 +1,2 @@
-# lega-sms
+# sms-tourney
+
