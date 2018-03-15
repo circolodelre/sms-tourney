@@ -13,20 +13,3 @@ app.config(function($stateProvider, $urlRouterProvider) {
             template: '<edit-devices/>'
         });
 });
-
-app.run(function($rootScope, $http) {
-    $http.post('/i').then(function(resp) {
-        $rootScope.devices = resp.data.devices;
-        console.log($rootScope.devices);
-    });
-});
-
-app.run(function() {
-    $(document).on('click', '[store-target]', function() {
-        $($(this).attr('store-target')).addClass('is-active');
-    });
-    $(document).on('click', '.modal-background', function() {
-        $(this).parent().removeClass('is-active');
-    });
-});
-

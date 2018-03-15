@@ -4,8 +4,9 @@ var app = express();
 var port = process.env.PORT || 3000;
 var bodyParser = require('body-parser');
 
-app.use(bodyParser.json()); // support json encoded bodies
-app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
 app.post('/api/sms/push', function (req, res) {
     fs.writeFileSync('sms.json', JSON.stringify(req.body));
@@ -13,5 +14,5 @@ app.post('/api/sms/push', function (req, res) {
 });
 
 app.listen(port, function () {
-    console.log('Example app listening on port', port);
+    console.log('[SMS-Tourney] Server start on port', port);
 });
